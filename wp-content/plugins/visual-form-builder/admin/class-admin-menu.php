@@ -103,10 +103,6 @@ class Visual_Form_Builder_Admin_Menu {
 		add_action( 'load-' . $page, array( $screen_options, 'add_option' ) );
 		add_action( 'load-' . $entries, array( $screen_options, 'add_option_entries' ) );
 
-		// Add Meta Boxes
-		$meta_boxes = new Visual_Form_Builder_Meta_Boxes();
-		add_action( 'load-' . $page, array( $meta_boxes, 'add_meta_boxes' ) );
-
 		// Add Help dropdown
 		add_action( 'load-' . $page, array( $this, 'help' ) );
 	}

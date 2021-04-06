@@ -77,14 +77,42 @@ class Visual_Form_Builder_Forms_Edit {
 			</h1>
 		<div id="vfb-form-builder-frame" class="metabox-holder <?php echo $class; ?>">
 			<div id="vfb-postbox-container-1" class='vfb-postbox-container'>
-		    	<form id="form-items" class="nav-menu-meta" method="post" action="">
-					<input name="action" type="hidden" value="create_field" />
-					<input name="form_id" type="hidden" value="<?php echo $form_nav_selected_id; ?>" />
-					<?php
-					wp_nonce_field( 'create-field-' . $form_nav_selected_id );
-					do_meta_boxes( 'visual-form-builder', 'side', null );
-					?>
-				</form>
+				<div id="side-sortables" class="meta-box-sortables">
+					<div class="vfb-accordion-container">
+						<ul class="outer-border">
+							<li class="vfb-control-section vfb-accordion-section open">
+								<h3 class="vfb-accordion-section-title">
+									<?php _e( 'Fields', 'visual-form-builder' ); ?>
+								</h3>
+								<div class="vfb-accordion-section-content">
+									<p><?php _e( 'Click to add fields', 'visual-form-builder' ); ?><span class="spinner"></span></p>
+
+									<form id="vfb-form-items" method="post" action="">
+										<input name="action" type="hidden" value="create_field" />
+										<input name="form_id" type="hidden" value="<?php echo $form_nav_selected_id; ?>" />
+										<?php
+											wp_nonce_field( 'create-field-' . $form_nav_selected_id );
+
+											$this->standard_fields();
+										?>
+									</form>
+								</div> <!-- .vfb-accordion-section-content -->
+							</li>
+							<li class="vfb-control-section vfb-accordion-section">
+								<h3 class="vfb-accordion-section-title">
+									<?php _e( 'Shortcode', 'visual-form-builder' ); ?>
+								</h3>
+								<div class="vfb-accordion-section-content">
+									<p><?php _e( 'Add forms to your Posts or Pages by locating the <strong>Add Form</strong> button in the area above your post/page editor.', 'visual-form-builder' ); ?></p>
+									<p>
+							    		<?php _e( 'Shortcode', 'visual-form-builder' ); ?>
+							    		<input value="[vfb id=<?php echo $form_nav_selected_id; ?>]" readonly="readonly" />
+							    	</p>
+								</div> <!-- .vfb-accordion-section-content -->
+							</li>
+						</ul>
+					</div> <!-- .vfb-accordion-container -->
+				</div> <!-- .meta-box-sortables -->
 			</div> <!-- .vfb-postbox-container -->
 
 		    <div id="vfb-postbox-container-2" class='vfb-postbox-container'>
@@ -433,6 +461,42 @@ class Visual_Form_Builder_Forms_Edit {
 		<?php
 		wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
 		wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
+	}
+
+	/**
+	 * [form_items description]
+	 * @return [type] [description]
+	 */
+	public function standard_fields() {
+	?>
+		<div id="vfb-standard-fields">
+			<ul class="vfb-fields-col-1">
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-fieldset">Fieldset</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-text"><b></b>Text</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-checkbox"><b></b>Checkbox</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-select"><b></b>Select</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-datepicker"><b></b>Date</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-url"><b></b>URL</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-digits"><b></b>Number</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-phone"><b></b>Phone</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-file"><b></b>File Upload</a></li>
+			</ul>
+			<ul class="vfb-fields-col-2">
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-section">Section</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-textarea"><b></b>Textarea</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-radio"><b></b>Radio</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-address"><b></b>Address</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-email"><b></b>Email</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-currency"><b></b>Currency</a></li>
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-time"><b></b>Time</a></li>
+
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-html"><b></b>HTML</a></li>
+
+				<li><a href="#" class="vfb-draggable-form-items" id="form-element-instructions"><b></b>Instructions</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div> <!-- #standard-fields -->
+	<?php
 	}
 
 	/**

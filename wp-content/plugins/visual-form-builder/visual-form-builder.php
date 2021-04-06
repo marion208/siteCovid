@@ -3,7 +3,7 @@
 Plugin Name: 	Visual Form Builder
 Plugin URI:		https://wordpress.org/plugins/visual-form-builder/
 Description: 	Dynamically build forms using a simple interface. Forms include jQuery validation, a basic logic-based verification system, and entry tracking.
-Version: 		3.0.1
+Version: 		3.0.2
 Author:			Matthew Muro
 Author URI: 	http://vfbpro.com
 Text Domain: 	visual-form-builder
@@ -27,7 +27,7 @@ class Visual_Form_Builder
 	 * The current version of the plugin.
 	 * @var [type]
 	 */
-	protected $version = '3.0.1';
+	protected $version = '3.0.2';
 
 	/**
 	 * The current DB version. Used if we need to update the DB later.
@@ -169,7 +169,6 @@ class Visual_Form_Builder
 		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-forms-list.php');
 		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-forms-new.php');
 		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-forms-edit.php');
-		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-forms-metaboxes.php');
 		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-fields.php');
 		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-page-settings.php');
 		require_once(VFB_WP_PLUGIN_DIR . 'admin/class-ajax.php');

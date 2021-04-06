@@ -1,4 +1,11 @@
 <?php
+
+//Begin Really Simple SSL session cookie settings
+@ini_set('session.cookie_httponly', true);
+@ini_set('session.cookie_secure', true);
+@ini_set('session.use_only_cookies', true);
+//END Really Simple SSL
+
 /**
  * La configuration de base de votre installation WordPress.
  *
@@ -22,25 +29,25 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'bdd_site_covid' );
+define('DB_NAME', 'bdd_site_covid');
 
 /** Utilisateur de la base de données MySQL. */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'root');
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', '' );
+define('DB_PASSWORD', '');
 
 /** Adresse de l’hébergement MySQL. */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'localhost');
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define('DB_CHARSET', 'utf8mb4');
 
 /**
  * Type de collation de la base de données.
  * N’y touchez que si vous savez ce que vous faites.
  */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**#@+
  * Clés uniques d’authentification et salage.
@@ -53,14 +60,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         ' 7)xQiK9iM_jd4mS`F;>LQsvMup^;_ 9IM2:g++S&PHyYSJ$g$1{z!lGEFA2Hy7e' );
-define( 'SECURE_AUTH_KEY',  'U2YwVdbHeOgx>G068bJ*BXPp*11Zchned=NFrs[<C&7`}qolrc4V[R/:-=VAJMj~' );
-define( 'LOGGED_IN_KEY',    'v>^X<KI<]!RtJpH{Reh13B2UmpVgh}fREXHl/+T;zDpR^wTPG/;9-,sK]$#%o[}!' );
-define( 'NONCE_KEY',        'P.6kPo;<&zkkp&p791JaLnM$lh8^J+&a224/MP M(& =1D1Gt$kZ%j  I:5lSmfZ' );
-define( 'AUTH_SALT',        '-%p`uu[7CEk|i&}m_/Qk:=]+Q NP;.F4CBE#P;;TW]g/{sFz<paXD;7X^Q%dQqgp' );
-define( 'SECURE_AUTH_SALT', 'O#.Ij_0SF[$T?{F0_^`E4vZNa=h En-]w;oCQVWNFQh xB=3UDL>ukn2BsNS3!*6' );
-define( 'LOGGED_IN_SALT',   ']>-i`YCYj=:-#QNF[{KtDJEJc yK3B,e:w5k{F[&=AL/R6Wb,X<VD6,xfW2h`YP_' );
-define( 'NONCE_SALT',       'mChft`0EQU:#k&k2+NJ|$7l+J~#XDY91k)axFz$hjd:(-bm;eu)f1k}OK5s7*hU7' );
+define('AUTH_KEY',         ' 7)xQiK9iM_jd4mS`F;>LQsvMup^;_ 9IM2:g++S&PHyYSJ$g$1{z!lGEFA2Hy7e');
+define('SECURE_AUTH_KEY',  'U2YwVdbHeOgx>G068bJ*BXPp*11Zchned=NFrs[<C&7`}qolrc4V[R/:-=VAJMj~');
+define('LOGGED_IN_KEY',    'v>^X<KI<]!RtJpH{Reh13B2UmpVgh}fREXHl/+T;zDpR^wTPG/;9-,sK]$#%o[}!');
+define('NONCE_KEY',        'P.6kPo;<&zkkp&p791JaLnM$lh8^J+&a224/MP M(& =1D1Gt$kZ%j  I:5lSmfZ');
+define('AUTH_SALT',        '-%p`uu[7CEk|i&}m_/Qk:=]+Q NP;.F4CBE#P;;TW]g/{sFz<paXD;7X^Q%dQqgp');
+define('SECURE_AUTH_SALT', 'O#.Ij_0SF[$T?{F0_^`E4vZNa=h En-]w;oCQVWNFQh xB=3UDL>ukn2BsNS3!*6');
+define('LOGGED_IN_SALT',   ']>-i`YCYj=:-#QNF[{KtDJEJc yK3B,e:w5k{F[&=AL/R6Wb,X<VD6,xfW2h`YP_');
+define('NONCE_SALT',       'mChft`0EQU:#k&k2+NJ|$7l+J~#XDY91k)axFz$hjd:(-bm;eu)f1k}OK5s7*hU7');
 /**#@-*/
 
 /**
@@ -86,13 +93,13 @@ $table_prefix = 'wp_site_covid_';
  *
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define('WP_DEBUG', false);
 
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
 /** Chemin absolu vers le dossier de WordPress. */
-if ( ! defined( 'ABSPATH' ) )
-  define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+if (!defined('ABSPATH'))
+  define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once(ABSPATH . 'wp-settings.php');
