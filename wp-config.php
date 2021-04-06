@@ -38,7 +38,7 @@ define('DB_USER', '	vwtmchghpmowaay7');
 define('DB_PASSWORD', '	vt7xpcjchbjzb33g');
 
 /** Adresse de l’hébergement MySQL. */
-define('DB_HOST', 'xlf3ljx3beaucz9x.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306');
+define('DB_HOST', 'xlf3ljx3beaucz9x.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8mb4');
