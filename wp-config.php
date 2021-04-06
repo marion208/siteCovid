@@ -1,11 +1,4 @@
 <?php
-
-//Begin Really Simple SSL session cookie settings
-@ini_set('session.cookie_httponly', true);
-@ini_set('session.cookie_secure', true);
-@ini_set('session.use_only_cookies', true);
-//END Really Simple SSL
-
 /**
  * La configuration de base de votre installation WordPress.
  *
@@ -26,29 +19,22 @@
  *
  * @package WordPress
  */
-
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
 define('DB_NAME', 'pcc0zrcv6oyto6mm');
-
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', 'jezsv701ml3wv47z');
-
 /** Mot de passe de la base de données MySQL. */
 define('DB_PASSWORD', 'kqzfo0zzj3im6qhn');
-
 /** Adresse de l’hébergement MySQL. */
 define('DB_HOST', 'lfmerukkeiac5y5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
-
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8mb4');
-
 /**
  * Type de collation de la base de données.
  * N’y touchez que si vous savez ce que vous faites.
  */
 define('DB_COLLATE', '');
-
 /**#@+
  * Clés uniques d’authentification et salage.
  *
@@ -69,7 +55,6 @@ define('SECURE_AUTH_SALT', 'O#.Ij_0SF[$T?{F0_^`E4vZNa=h En-]w;oCQVWNFQh xB=3UDL>
 define('LOGGED_IN_SALT',   ']>-i`YCYj=:-#QNF[{KtDJEJc yK3B,e:w5k{F[&=AL/R6Wb,X<VD6,xfW2h`YP_');
 define('NONCE_SALT',       'mChft`0EQU:#k&k2+NJ|$7l+J~#XDY91k)axFz$hjd:(-bm;eu)f1k}OK5s7*hU7');
 /**#@-*/
-
 /**
  * Préfixe de base de données pour les tables de WordPress.
  *
@@ -78,7 +63,6 @@ define('NONCE_SALT',       'mChft`0EQU:#k&k2+NJ|$7l+J~#XDY91k)axFz$hjd:(-bm;eu)f
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
 $table_prefix = 'wp_site_covid_';
-
 /**
  * Pour les développeurs : le mode déboguage de WordPress.
  *
@@ -94,12 +78,9 @@ $table_prefix = 'wp_site_covid_';
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', true);
-
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
-
 /** Chemin absolu vers le dossier de WordPress. */
 if (!defined('ABSPATH'))
   define('ABSPATH', dirname(__FILE__) . '/');
-
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
