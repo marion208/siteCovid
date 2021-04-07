@@ -1,4 +1,5 @@
 <?php
+
 /**
  * La configuration de base de votre installation WordPress.
  *
@@ -19,6 +20,8 @@
  *
  * @package WordPress
  */
+if (isset($_SERVER[‘HTTP_X_FORWARDED_PROTO’]) && $_SERVER[‘HTTP_X_FORWARDED_PROTO’] == ‘https’)
+  $_SERVER[‘HTTPS’] = ‘on’;
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
 define('DB_NAME', 'pcc0zrcv6oyto6mm');
