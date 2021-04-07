@@ -78,8 +78,6 @@ $table_prefix = 'wp_site_covid_';
  *
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
-define('WP_SITEURL', 'https://infinite-citadel-99165.herokuapp.com/');
-define('WP_HOME', 'https://infinite-citadel-99165.herokuapp.com/');
 define('WP_DEBUG', true);
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 /** Chemin absolu vers le dossier de WordPress. */
