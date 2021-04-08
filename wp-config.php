@@ -22,13 +22,13 @@
  */
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'bdd_site_covid');
+define('DB_NAME', 'pcc0zrcv6oyto6mm');
 /** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'wpUser');
+define('DB_USER', 'jezsv701ml3wv47z');
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'A67Qr%NF8nkepqrTp');
+define('DB_PASSWORD', 'kqzfo0zzj3im6qhn');
 /** Adresse de l’hébergement MySQL. */
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', 'lfmerukkeiac5y5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8mb4');
 /**
