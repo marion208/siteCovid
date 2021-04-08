@@ -14,9 +14,6 @@ function siteanticovidtheme_enqueue_styles()
         array('parent-style')
     );
 }
-
-update_option('siteurl', 'https://infinite-citadel-99165.herokuapp.com/');
-update_option('home', 'https://infinite-citadel-99165.herokuapp.com/');
 /*
  * Your code goes below
  */
